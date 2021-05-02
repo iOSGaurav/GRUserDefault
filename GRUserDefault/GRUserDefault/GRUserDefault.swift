@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - Key Namespaceable
-protocol KeyNamespaceable { }
+public protocol KeyNamespaceable { }
 extension KeyNamespaceable {
     private static func namespace(_ key: String) -> String {
         return "\(Self.self).\(key)"
@@ -18,7 +18,7 @@ extension KeyNamespaceable {
     }
 }
 // MARK: - Bool Defaults
-protocol BoolUserDefaultable: KeyNamespaceable {
+public protocol BoolUserDefaultable: KeyNamespaceable {
     associatedtype BoolDefaultKey: RawRepresentable
 }
 extension BoolUserDefaultable where BoolDefaultKey.RawValue == String {
@@ -36,7 +36,7 @@ extension BoolUserDefaultable where BoolDefaultKey.RawValue == String {
     }
 }
 // MARK: - Float Defaults
-protocol FloatUserDefaultable: KeyNamespaceable {
+public protocol FloatUserDefaultable: KeyNamespaceable {
     associatedtype FloatDefaultKey: RawRepresentable
 }
 extension FloatUserDefaultable where FloatDefaultKey.RawValue == String {
@@ -54,7 +54,7 @@ extension FloatUserDefaultable where FloatDefaultKey.RawValue == String {
     }
 }
 // MARK: - Integer Defaults
-protocol IntegerUserDefaultable: KeyNamespaceable {
+public protocol IntegerUserDefaultable: KeyNamespaceable {
     associatedtype IntegerDefaultKey: RawRepresentable
 }
 extension IntegerUserDefaultable where IntegerDefaultKey.RawValue == String {
@@ -72,7 +72,7 @@ extension IntegerUserDefaultable where IntegerDefaultKey.RawValue == String {
     }
 }
 // MARK: - Object Defaults
-protocol ObjectUserDefaultable: KeyNamespaceable {
+public protocol ObjectUserDefaultable: KeyNamespaceable {
     associatedtype ObjectDefaultKey: RawRepresentable
 }
 extension ObjectUserDefaultable where ObjectDefaultKey.RawValue == String {
@@ -90,7 +90,7 @@ extension ObjectUserDefaultable where ObjectDefaultKey.RawValue == String {
     }
 }
 // MARK: - Double Defaults
-protocol DoubleUserDefaultable: KeyNamespaceable {
+public protocol DoubleUserDefaultable: KeyNamespaceable {
     associatedtype DoubleDefaultKey: RawRepresentable
 }
 extension DoubleUserDefaultable where DoubleDefaultKey.RawValue == String {
@@ -108,7 +108,7 @@ extension DoubleUserDefaultable where DoubleDefaultKey.RawValue == String {
     }
 }
 // MARK: - URL Defaults
-protocol URLUserDefaultable: KeyNamespaceable {
+public protocol URLUserDefaultable: KeyNamespaceable {
     associatedtype URLDefaultKey: RawRepresentable
 }
 extension URLUserDefaultable where URLDefaultKey.RawValue == String {
@@ -126,7 +126,7 @@ extension URLUserDefaultable where URLDefaultKey.RawValue == String {
     }
 }
 // MARK: - String Defaults
-protocol StringUserDefaultable: KeyNamespaceable {
+public protocol StringUserDefaultable: KeyNamespaceable {
     associatedtype StringDefaultKey: RawRepresentable
 }
 extension StringUserDefaultable where StringDefaultKey.RawValue == String {
@@ -142,7 +142,7 @@ extension StringUserDefaultable where StringDefaultKey.RawValue == String {
     }
 }
 // MARK: - Array Defaults
-protocol ArrayUserDefaultable: KeyNamespaceable {
+public protocol ArrayUserDefaultable: KeyNamespaceable {
     associatedtype ArrayDefaultKey: RawRepresentable
 }
 extension ArrayUserDefaultable where ArrayDefaultKey.RawValue == String {
@@ -158,7 +158,7 @@ extension ArrayUserDefaultable where ArrayDefaultKey.RawValue == String {
     }
 }
 // MARK: - Dictionary Defaults
-protocol DictionaryUserDefaultable: KeyNamespaceable {
+public protocol DictionaryUserDefaultable: KeyNamespaceable {
     associatedtype DictionaryDefaultKey: RawRepresentable
 }
 extension DictionaryUserDefaultable where DictionaryDefaultKey.RawValue == String {
@@ -174,7 +174,7 @@ extension DictionaryUserDefaultable where DictionaryDefaultKey.RawValue == Strin
     }
 }
 // MARK: - Data Defaults
-protocol DataUserDefaultable: KeyNamespaceable {
+public protocol DataUserDefaultable: KeyNamespaceable {
     associatedtype DataDefaultKey: RawRepresentable
 }
 extension DataUserDefaultable where DataDefaultKey.RawValue == String {
