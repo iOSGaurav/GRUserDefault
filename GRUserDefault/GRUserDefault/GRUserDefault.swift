@@ -131,12 +131,12 @@ public protocol StringUserDefaultable: KeyNamespaceable {
 }
 extension StringUserDefaultable where StringDefaultKey.RawValue == String {
     // Set
-    static func set(_ string: String, forKey key: StringDefaultKey) {
+    public static func set(_ string: String, forKey key: StringDefaultKey) {
         let key = namespace(key)
         UserDefaults.standard.set(string, forKey: key)
     }
     // Get
-    static func string(forKey key: StringDefaultKey) -> String? {
+    public static func string(forKey key: StringDefaultKey) -> String? {
         let key = namespace(key)
         return UserDefaults.standard.string(forKey: key)
     }
